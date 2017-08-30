@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="jquery-1.11.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+       var arr1=[];
+      var i=0,j=0;
+      $("#bt1").click(function(){
+        var el=document.getElementById("t1").value;
+        arr1[i]=parseInt(el);
+        i++;
+       $("#ap").append(el+"<br>");
+      });
+      $("#bt2").click(function(){
+        var el1=parseInt(document.getElementById("t2").value);
+      for( j=0;j<arr1.length;j++){
+        var m=arr1[j]+el1;
+       if(m>=100)
+            $("#ap1").append(arr1[j]+"+"+el1+"="+m+"<br>");
+        }
+        });
+    });
+  </script>
+</head>
+<body>
+  <b>Form1:</b>
+<input type="text" id="t1"> 
+  <button id="bt1">sudmit</button>
+  <b>Form2:</b>
+  <input type="text" id="t2">
+  <button id="bt2">sudmit</button>
+  <p id="ap"></p>
+  <p id="ap1"></p>
+</body>
+</html>
