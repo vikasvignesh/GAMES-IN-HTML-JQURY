@@ -1,0 +1,125 @@
+<html>
+<head>
+ <script src="jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#ttop").click(function(){
+$("#ttop").css("backgroundColor","green");
+
+ //$("#ttop").css("display","none");
+  //setTimeout(function(){ $("#ttop").css("display","block"); },100);
+$("#white").slideDown(4000);
+$(".f2").slideDown(500);
+$(".f1").fadeOut(5000);
+$("#be").slideUp(4000);
+});
+$("#ttop").mouseenter(function(){
+$("#ttop").css("backgroundColor","red");
+$("#white").stop();
+$("#be").stop();
+$(".f1").stop();
+$(".f1").stop();
+$(".f2").css("display","none");
+});
+});
+</script>
+<style>
+#blue{
+width:200px;
+height:200px;
+background-color:#60A4E9;
+position:absolute;
+border-bottom:2px solid #cfd6b8;
+border-left:2px solid #cfd6b8;
+border-right:2px solid #cfd6b8;
+border-radius:15px;
+}
+#white{
+width:200px;
+height:200px;
+background-color:white;
+position:absolute;
+display:none;
+border-bottom:2px solid #cfd6b8;
+border-left:2px solid #cfd6b8;
+border-right:2px solid #cfd6b8;
+border-radius:15px;
+}
+#we{
+width:200px;
+height:200px;
+background-color:#60A4E9;
+margin:210px;
+position:absolute;
+border-bottom:2px solid #cfd6b8;
+border-left:2px solid #cfd6b8;
+border-right:2px solid #cfd6b8;
+border-radius:15px;
+}
+#be{
+width:200px;
+height:200px;
+background-color:white;
+position:absolute;
+border-bottom:2px solid #cfd6b8;
+border-left:2px solid #cfd6b8;
+border-right:2px solid #cfd6b8;
+border-radius:15px;
+}
+img{
+height:50px;
+width:50px;
+margin-left:204px;
+margin-top:160px;
+}
+#ttop{
+width:20px;
+height:5px;
+border:1px solid black;
+margin-left:223px;
+margin-top:-56px;
+border-radius:15px;
+background-color:red;
+}
+.f1{
+width:5px;
+height:10px;
+background-color:white;
+margin-left:248px;
+margin-top:-190px;
+}
+.f2{
+width:5px;
+height:200px;
+background-color:#4b87bc;
+margin-left:-215px;
+margin-top:180px;
+display:none;
+}
+#total{
+margin:100px;
+}
+</style>
+</head>
+<body>
+<div id="total">
+<div id="blue">
+<div id="white">
+</div>
+</div>
+
+<div id="we">
+<div id="be">
+<div class="f1" >
+<div class="f2" ></div>
+</div>
+</div>
+</div>
+<img src="tapm.png">
+
+<div id="ttop"></div>
+
+
+</div>
+</body>
+</html>
