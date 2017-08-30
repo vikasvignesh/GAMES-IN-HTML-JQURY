@@ -1,0 +1,95 @@
+<html>
+<head>
+<script src="jquery-1.11.1.min.js"></script>
+<style>
+#friends 
+{
+ position: absolute; 
+ height:50px;
+ width:50px;
+ }
+ #friend
+{
+ position: absolute; 
+ height:50px;
+ width:50px;
+ opacity:0;
+ }
+ #friend:hover{
+ opacity:0.5;
+ }
+ #bx1{
+ width:400px;
+ height:500px;
+ background-color:blue;
+ margin:20px;
+ }
+ #bx2{
+ width:400px;
+ height:500px;
+ border:2px solid black;
+ margin-top:-520px;
+ margin-left:800px;
+ }
+ h1{
+ margin-left:500px;
+ margin-top:-300px;
+ }
+</style>
+<script>
+var t = 0;
+var t1=0;
+function moveit() {
+    t += 0.05;
+
+    var r = 100;
+    var xcenter = 200;
+    var ycenter = 200;
+    var newLeft = Math.floor(xcenter + (r * Math.cos(t)));
+    var newTop = Math.floor(ycenter + (r * Math.sin(t)));
+    $('#friends').animate({
+        top: newTop,
+        left: newLeft,
+    }, 100, function() {
+        moveit();
+    });
+	 
+}
+function moveit1() {
+    t1 += 0.05;
+
+    var r = 100;
+    var xcenter = 1000;
+    var ycenter = 200;
+    var newLeft = Math.floor(xcenter + (r * Math.cos(t)));
+    var newTop = Math.floor(ycenter + (r * Math.sin(t)));
+    $('#friend').animate({
+        top: newTop,
+        left: newLeft,
+    }, 100, function() {
+        moveit1();
+    });
+	 
+}
+var c=0;
+$(document).ready(function() {
+    moveit();
+	moveit1();
+	$("#friend").click(function(){
+	c++;
+	document.getElementById('ct').innerHTML=c;
+	});
+});
+</script>
+</head>
+<body>
+<div id="bx1">
+<img src="love.png" id="friends"/>
+</div>
+<div id="bx2">
+<img src="love1.png" id="friend"/>
+</div>
+
+<h1>Hit:<span id="ct"></span></h1>
+</body>
+</html>

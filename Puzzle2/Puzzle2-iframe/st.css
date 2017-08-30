@@ -1,0 +1,36 @@
+#box1{
+width:400px;
+height:400px;
+border:2px solid black;
+margin:100px;
+margin-left:30px;
+background-color:#60A4E9;
+}
+img{
+	height:50px;
+	width:50px;
+	position:absolute;
+}
+#box2{
+width:400px;
+height:400px;
+border:2px solid black;
+margin-left:850px;
+margin-top:-500px;
+background-color:#60A4E9;
+}
+iframe{
+	width:400px;
+	height:400px;
+}
+#md{
+	width:200px;
+	height:100px;
+	border:2px solid black;
+	margin:-240px 550px;
+}
+p{
+	margin-left:700px;
+	margin-top:-290px;
+	font-size:30px;
+}
