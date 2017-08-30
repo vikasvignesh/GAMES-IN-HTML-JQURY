@@ -1,0 +1,77 @@
+<html>
+  <title>
+    puzzle 2.1
+  </title>
+  <body>
+    <script>
+	   function func(){
+	   var c = 0;
+	   var d ;
+	   console.log(document.f1.s.value);
+	    console.log(document.f1.a.value);
+		 console.log(document.f1.b.value);
+		  console.log(document.f1.c.value);
+		   console.log(document.f1.d.value);
+		   console.log("finish");
+	   if(document.f1.s.value!=''){
+	      if(document.f1.a.value!="")c++;
+		  else d=1;
+		  if(document.f1.b.value!="")c++;
+		  else d=2;
+		  if(document.f1.c.value!="")c++;
+		  else d=3;
+		  if(document.f1.d.value!="")c++;
+		  else d=4;
+	      if(c==3){
+		    var tot = parseInt(document.f1.s.value);
+			var x , y, z;
+		    switch(d){
+			  case 1:
+			  x=parseInt(document.f1.b.value);
+			  y=parseInt(document.f1.c.value);
+			  z=parseInt(document.f1.d.value);
+			  document.f1.a.value=tot-x-y-z;
+			  break;
+			  case 2:
+			  x=parseInt(document.f1.a.value);
+			  y=parseInt(document.f1.c.value);
+			  z=parseInt(document.f1.d.value);
+			  document.f1.b.value=tot-x-y-z;
+			  break;
+			  case 3:
+			  x=parseInt(document.f1.a.value);
+			  y=parseInt(document.f1.b.value);
+			  z=parseInt(document.f1.d.value);
+			  document.f1.c.value=tot-x-y-z;
+			  break;
+			  case 4:
+			  x=parseInt(document.f1.a.value);
+			  y=parseInt(document.f1.b.value);
+			  z=parseInt(document.f1.c.value);
+			  document.f1.d.value=tot-x-y-z;
+			  break;
+			
+			}
+		  }
+	   }else{
+	   console.log("s is notnull");
+         if((document.f1.a.value!="")&&(document.f1.b.value!="")&&(document.f1.c.value!="")&&(document.f1.d.value!="")){
+		   document.f1.s.value=parseInt(document.f1.a.value)+parseInt(document.f1.b.value)+parseInt(document.f1.c.value)+parseInt(document.f1.d.value);
+		 }
+	   }
+	      
+	   }
+	</script>
+	
+	<form name= "f1" align = center  style="border-style:solid;padding:10 10 10 10;margin:10 300 10 300;">
+	  <label>A: </label></br><input type ="text" name ="a" onKeyUp="func()"></input></br>
+	  <label>B: </label></br><input type ="text" name ="b" onKeyUp="func()"></input></br>
+	  <label>C: </label></br><input type ="text" name ="c" onKeyUp="func()"></input></br>
+	  <label>D: </label></br><input type ="text" name ="d" onKeyUp="func()"></input></br>
+	  <label>___________________________</label></br>
+	  <label>Total:</label></br>
+	  <input type ="text" name ="s" onKeyUp="func()"></input>
+	  
+	</form>
+  </body>
+</html>
